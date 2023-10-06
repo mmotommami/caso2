@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package tareamari;
+package sistemapaneles;
 
 /**
  *
- * @author XPC
+ * @author Mariangel Alfaro Diaz
  */
 public class Dispositivo {
     private String nombre;
@@ -15,7 +15,13 @@ public class Dispositivo {
     private int horasActivo;
     private int horaInicio;
     
-    
+    /**
+     * Constructor de la clase
+     * @param nombre
+     * @param consumoEnergico
+     * @param horasActivo
+     * @param horaInicio 
+     */
     public Dispositivo(String nombre, double consumoEnergico, int horasActivo, int horaInicio) {
         this.nombre = nombre;
         this.consumoEnergico = consumoEnergico;
@@ -25,6 +31,7 @@ public class Dispositivo {
 
     }
     
+    // Getters y setters de la clase
     public String getNombre() {
         return nombre;
     }

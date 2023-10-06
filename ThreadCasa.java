@@ -2,25 +2,34 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package tareamari;
+package sistemapaneles;
 
 import static java.lang.Thread.sleep;
+import java.util.Scanner;
 
 /**
  *
- * @author XPC
+ * @author Mariangel Alfaro Diaz
  */
 public class ThreadCasa extends Thread {
     private boolean running = true;
     private boolean paused = false;
     private int horaInicio;
     private Casa casa;
-
+    
+    /**
+     * Constructor de la clase
+     * @param horaInicio
+     * @param casa 
+     */
     public ThreadCasa(int horaInicio, Casa casa) {
         this.horaInicio = horaInicio;
         this.casa = casa;
     }
     
+    /**
+     * Metodo que inicializa el hilo
+     */
     @Override
     public void run() {
         int horaActual = horaInicio;
@@ -29,7 +38,7 @@ public class ThreadCasa extends Thread {
             try {
                 sleep(1500);
                 System.out.println("Hora actual: " + horaActual + ":00");
-                this.casa.encenderDispositivos(horaActual);
+                this.casa.encenderDispositivos(horaActual);  
                 this.casa.apagarDispositivos(horaActual);
                 if (horaActual == 23){
                     horaActual = 0;
@@ -37,7 +46,15 @@ public class ThreadCasa extends Thread {
                     horaActual++;
                 }
                 if (horaInicio == horaActual){
-                    detener();
+                    Scanner input = new Scanner(System.in);  
+                    System.out.println("Desea continuar? y/n: ");
+
+                    String respuesta = input.nextLine();
+                    if(respuesta.toLowerCase().trim().equals("n")){
+                        detener();
+                    }else{
+                        System.out.println("--------------------------------------------------");
+                    }
                 }
 
             } catch (InterruptedException ex) {
@@ -45,19 +62,18 @@ public class ThreadCasa extends Thread {
             }
         }        
     }
-
+    
+    /**
+     * Metodo para verificar el estado del hilo
+     * @return boolean
+     */
     public boolean isRunning() {
         return running;
     }
     
-    public void pause(){
-        this.paused = !this.paused;
-    }
-
-    public boolean isPaused() {
-        return paused;
-    }
-    
+    /**
+     * Metodo para detener el hilo
+     */
     public void detener(){
         this.running = false;
     }
