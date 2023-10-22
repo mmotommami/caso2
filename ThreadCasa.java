@@ -16,15 +16,17 @@ public class ThreadCasa extends Thread {
     private boolean paused = false;
     private int horaInicio;
     private Casa casa;
+    private Historial historial;
     
     /**
      * Constructor de la clase
      * @param horaInicio
      * @param casa 
      */
-    public ThreadCasa(int horaInicio, Casa casa) {
+    public ThreadCasa(int horaInicio, Casa casa, Historial historial) {
         this.horaInicio = horaInicio;
         this.casa = casa;
+        this.historial = historial;
     }
     
     /**
@@ -38,6 +40,7 @@ public class ThreadCasa extends Thread {
             try {
                 sleep(1500);
                 System.out.println("Hora actual: " + horaActual + ":00");
+                historial.agregarTextoAlHistorial("Hora actual: " + horaActual + ":00");
                 this.casa.encenderDispositivos(horaActual);  
                 this.casa.apagarDispositivos(horaActual);
                 if (horaActual == 23){

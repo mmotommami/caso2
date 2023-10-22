@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package sistemapaneles;
 
 /**
@@ -9,14 +6,14 @@ package sistemapaneles;
  * @author Mariangel Alfaro Diaz
  */
 public class PanelSolar extends FuenteDeEnergia {
-    
     /**
      * Constructor de la clase
      * @param capacidadMaxima 
      */
-    public PanelSolar(double capacidadMaxima) {
+    public PanelSolar(double capacidadMaxima, Historial historial) {
         this.capacidadMaxima = capacidadMaxima;
         this.energiaDisponible = 0.0;
+        this.historial = historial;
     }
     
     /**
@@ -29,13 +26,16 @@ public class PanelSolar extends FuenteDeEnergia {
         int aux = numPanel+1;
         if(getCapacidadMaxima() == energiaDisponible){  //Verifica si es necesaria la carga
             System.out.println("El panel " + aux + " esta cargado completamente");
+            historial.agregarTextoAlHistorial("El panel " + aux + " esta cargado completamente");
         }else{
             if (getCapacidadMaxima() < energiaDisponible + extra){ // Verifica si recibe mas energia de la que puede almacenar
                 this.energiaDisponible = getCapacidadMaxima();
                 System.out.println("El panel " + aux + " esta cargado completamente");
+                historial.agregarTextoAlHistorial("El panel " + aux + " esta cargado completamente");
             }else{
                this.energiaDisponible += extra;
                System.out.println("Energia disponible en el panel " + aux + ": " + this.energiaDisponible );
+               historial.agregarTextoAlHistorial("Energia disponible en el panel " + aux + ": " + this.energiaDisponible );
             }
         }
     }

@@ -18,9 +18,10 @@ public class Bateria extends FuenteDeEnergia{
      * Constructor de la clase
      * @param capacidadMaxima 
      */
-    public Bateria(double capacidadMaxima) {
+    public Bateria(double capacidadMaxima,Historial historial) {
         this.capacidadMaxima = capacidadMaxima;
         this.energiaDisponible = capacidadMaxima;
+        this.historial = historial;
     }
     
     /**
@@ -44,12 +45,13 @@ public class Bateria extends FuenteDeEnergia{
                         paneles.get(i).setEnUso(getCapacidadMaxima()-energiaDisponible);
                         this.energiaDisponible += getCapacidadMaxima()-energiaDisponible;
                         System.out.println("Bateria cargada completamente" );
+                        historial.agregarTextoAlHistorial("Bateria cargada completamente" );
                     }
                 }
             }
         }
         System.out.println("Energia disponible en la bateria: " + this.energiaDisponible );
-
+        historial.agregarTextoAlHistorial("Energia disponible en la bateria: " + this.energiaDisponible );
     }
     
     /**

@@ -1,0 +1,40 @@
+
+Dispositivo Refrigeradora agregado correctamente. Se conectara a la(s) 0 hora(s) por un tiempo de 24 hora(s)
+
+Dispositivo Television agregado correctamente. Se conectara a la(s) 8 hora(s) por un tiempo de 8 hora(s)
+
+Dispositivo Cocina agregado correctamente. Se conectara a la(s) 7 hora(s) por un tiempo de 8 hora(s)
+
+Dispositivo Computadora agregado correctamente. Se conectara a la(s) 13 hora(s) por un tiempo de 5 hora(s)
+
+Dispositivo Videojuego agregado correctamente. Se conectara a la(s) 20 hora(s) por un tiempo de 4 hora(s)
+
+Dispositivo Sistema de bombillos agregado correctamente. Se conectara a la(s) 0 hora(s) por un tiempo de 24 hora(s)
+
+Dispositivo Microondas agregado correctamente. Se conectara a la(s) 8 hora(s) por un tiempo de 12 hora(s)
+
+Dispositivo Lavadora agregado correctamente. Se conectara a la(s) 9 hora(s) por un tiempo de 1 hora(s)
+
+Hora actual: 0:00
+
+Energia disponible en la bateria: 1000.0
+
+El dispositivo Refrigeradora se conecto correctamente
+
+Energia disponible en la bateria: 500.0
+
+El dispositivo Sistema de bombillos se conecto correctamente
+
+Energia disponible en la bateria: 420.0
+
+Hora actual: 1:00
+
+Energia disponible en la bateria: 420.0
+
+Hora actual: 2:00
+
+Energia disponible en la bateria: 420.0
+
+Hora actual: 3:00
+
+Energia disponible en la bateria: 420.0

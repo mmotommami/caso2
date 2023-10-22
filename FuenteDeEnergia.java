@@ -13,6 +13,7 @@ public class FuenteDeEnergia {
     double capacidadMaxima;
     double enUso;
     double energiaDisponible;
+    Historial historial;
     
     /**
      * Constructor de la clase

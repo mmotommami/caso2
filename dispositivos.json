@@ -1,52 +1,62 @@
 {
-    "dispositivos": [
-      {
-        "nombre": "Refrigeradora",
-        "consumo": 500.0,
-        "activo": 24,
-        "inicio": 0
-      },
-      {
-        "nombre": "Television",
-        "consumo": 400.0,
-        "activo": 8,
-        "inicio": 8
-      },
-      {
-        "nombre": "Cocina",
-        "consumo": 60.0,
-        "activo": 8,
-        "inicio": 7
-      },
-      {
-        "nombre": "Computadora",
-        "consumo": 50.0,
-        "activo": 5,
-        "inicio": 13
-      },
-      {
-        "nombre": "Videojuego",
-        "consumo": 60.0,
-        "activo": 4,
-        "inicio": 20
-      },
-      {
-        "nombre": "Sistema de bombillos",
-        "consumo": 80.0,
-        "activo": 24,
-        "inicio": 0
-      },
-      {
-        "nombre": "Microondas",
-        "consumo": 70.0,
-        "activo": 12,
-        "inicio": 8
-      },
-      {
-        "nombre": "Lavadora",
-        "consumo": 200.0,
-        "activo": 1,
-        "inicio": 9
-      }
-    ]
-  }
+  "panel": [
+    {
+      "capacidad": 500.0
+    }
+  ],
+  "bateria": [
+    {
+      "capacidad": 1000.0
+    }
+  ],
+  "dispositivos": [
+    {
+      "nombre": "Refrigeradora",
+      "consumo": 500.0,
+      "activo": 24,
+      "inicio": 0
+    },
+    {
+      "nombre": "Television",
+      "consumo": 400.0,
+      "activo": 8,
+      "inicio": 8
+    },
+    {
+      "nombre": "Cocina",
+      "consumo": 60.0,
+      "activo": 8,
+      "inicio": 7
+    },
+    {
+      "nombre": "Computadora",
+      "consumo": 50.0,
+      "activo": 5,
+      "inicio": 13
+    },
+    {
+      "nombre": "Videojuego",
+      "consumo": 60.0,
+      "activo": 4,
+      "inicio": 20
+    },
+    {
+      "nombre": "Sistema de bombillos",
+      "consumo": 80.0,
+      "activo": 24,
+      "inicio": 0
+    },
+    {
+      "nombre": "Microondas",
+      "consumo": 70.0,
+      "activo": 12,
+      "inicio": 8
+    },
+    {
+      "nombre": "Lavadora",
+      "consumo": 200.0,
+      "activo": 1,
+      "inicio": 9
+    }
+  ]
+}
